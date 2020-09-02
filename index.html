@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folklore Museum</title>
+    <link rel="icon" type="image/png" href="/favicon.png"/> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+   
+</head>
+<body>
+    <div id="wrapper">
+        <!-- START OF HEADER  -->
+        <header id="header">
+            <!-- The navbar should always be at the top of the viewport. -->
+            <nav id="nav-bar">
+                <div class="logo">
+                    <img src="assets/visuals/mister_wong_logo.png" alt="" id="header-img">
+                </div>
+                <!-- When I click a .nav-link button in the nav element, I am taken to the corresponding section of the landing page. -->
+                <ul class="nav-links">
+                    <li>
+                        <a href="#" class="nav-link">Exhibitions</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link">Reseach and Collections</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link">Services</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link">Museum Shop</a>
+                    </li>
+                </ul>
+                <!-- START OF BURGER NAV FOR MOBILE DISPLAY  -->
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+                <!-- END OF BURGER NAV FOR MOBILE DISPLAY  -->
+            </nav>
+        </header>
+        <!-- END OF HEADER -->
+        
+        
+        <!-- THIS IS VIDEO -->
+        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/9xwazD5SyVg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!-- END OF VIDEO -->
+        
+        <!-- START OF TEXT PART  -->
+        <div class="flex">
+            <div class="flex-item" id="info">
+                <div id="about"><p>about us</p></div>
+                <div id="exhibition"><p>our perminent exhibition</p></div>
+                <div id="shop"><p>You can shop here</p></div>
+            </div>
+            
+            <div class="flex-item" id="connect">
+                <div id="subscribe-to">
+                    <form action="https://www.freecodecamp.com/email-submit" method="POST" id="form">
+                        <input type="text" id="name" name="name" required
+                        minlength="4" maxlength="8" size="10">
+                        <input type="email" id="email" placeholder="your email"  pattern=".+@globex.com" required>
+                        
+                        <input type="submit" value="Subscribe" id="submit" >
+                    </form>
+                </div>
+                
+                <div id="news">
+                    <p>announcements</p>
+                </div>
+            </div>
+        </div>
+        <!-- END OF TEXT PART  -->
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

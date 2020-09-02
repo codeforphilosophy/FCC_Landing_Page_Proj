@@ -1,0 +1,47 @@
+/* My product landing page should have at least one media query. */
+/* My product landing page should utilize CSS flexbox at least once. */
+
+#video-div{
+    /* position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    max-width: 1200px;
+}
+
+#video-div video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#video-div h2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    font-size: 30vw;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000;
+    line-height: 100vh;
+    mix-blend-mode: screen;
+}
+
+#video-div::after{
+    content:'';
+    display: block;
+    clear: both;
+}

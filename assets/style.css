@@ -1,0 +1,146 @@
+
+/* REMOVING ALL STYLES AND FIXING VIEW TO BORDER-BOX INSTEAD OF CONTENT-BOX  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#wrapper{
+    /* max-width: 95%; */
+    min-width: 320px;
+    margin: 0 auto;
+    color: #555554;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+#nav-bar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #5d4954;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* CHANGING THE SIZE OF LOGO IMG  */
+.logo{
+    width: 60px;
+    height: 60px;
+}
+
+.logo img{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* CHANGING li 's TO ROW  */
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+/* REMOVING DOT'S FORM LIST  */
+.nav-links li{
+    list-style: none;
+}
+
+/* STAYLING THE ANCOR TAG  */
+.nav-links a{
+    color: rgb(226, 226, 226);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* BURGER NAV IS DISPLAY NON IN DESK. VERSION  */
+
+.burger{
+  display: none;
+}
+
+/* STYLE OF BURGER NAV  */
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: rgb(226, 226, 226);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width:1200px){
+    .nav-links{
+        width: 80%;
+    } 
+}
+
+@media screen and (max-width:760px){ 
+    /* having parent in relative position is key  */
+    #wrapper{
+        position: relative;
+        overflow-x: hidden;
+        height: 100vh;
+    } 
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #5d4954;
+        display: flex;
+        flex-direction: column;
+        /* because we changed direction instead of justify-content we use align-items  */
+        align-items: center;
+        width: 100%;
+        /* this has moved column nav list to the right of the web-site. to stop scroling look ab #wrapper tag 760px media */
+        transform: translateX(100%);
+        transition: transform 0.5 ease-in;
+    }
+
+    .nav-links::after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .nav-links li{
+        opacity: 0;
+    } 
+    
+    /* toggling/adding this class to .nav-links in js, by adding eventListener to burger class  */
+    .nav-active{
+        transform: translateX(0%);
+    }
+
+    .burger{
+        display: block;
+        cursor: pointer;
+    }
+
+    /* adding effect to navbar, using js */
+    @keyframes navLinkFade{
+        from{
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+
+    /* BURGER ANIMATION */
+    .toggle .line1{
+        transform: rotate(-45deg) translate(-5px,6px);
+    }
+    .toggle .line2{
+        opacity: 0;
+    }
+    .toggle .line3{
+        transform: rotate(45deg) translate(-5px,-6px);
+    }
+
+}
