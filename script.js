@@ -18,4 +18,3 @@ burger.addEventListener('click', function(){
     //BURGER ANIMATION
     burger.classList.toggle('toggle')
 });
-
