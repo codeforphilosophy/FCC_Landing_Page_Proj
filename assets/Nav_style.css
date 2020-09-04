@@ -6,18 +6,6 @@
     box-sizing: border-box;
 } */
 
-body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-#wrapper{
-    /* max-width: 95%; */
-    min-width: 320px;
-    margin: 0 auto;
-    color: #555554;
-    font-family: 'Poppins', sans-serif;
-}
 
 #nav-bar{
     display: flex;
@@ -81,11 +69,6 @@ body{
         width: 80%;
     } 
 }
-
-
-
-
-
 
 @media screen and (max-width:760px){ 
     /* having parent in relative position is key  */

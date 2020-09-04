@@ -1,0 +1,35 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.125rem;
+}
+#wrapper{
+    /* max-width: 95%; */
+    min-width: 320px;
+    margin: 0 auto;
+    color: #555554;
+    font-family: 'Poppins', sans-serif;
+}
+h1{
+    font-size: 3rem;
+}
+h2{
+    font-size: 1.5rem;
+}
+.info-div{
+    display: flex;
+    margin: 0 20px;
+}
+
+#subscribe-to{
+    width: 60%;
+}
+
+#subscribe-to input{
+    display: block;
+}
+#news{
+    width: 40%;
+}
